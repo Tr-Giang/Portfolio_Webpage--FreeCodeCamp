@@ -1,0 +1,284 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+#app {
+  position: relative;
+}
+
+header {
+  height: 7.1rem;
+  background-color: #be3144;
+  -webkit-box-shadow: 0 1px 1px 0 #181719;
+          box-shadow: 0 1px 1px 0 #181719;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header .nav-bar {
+  line-height: 7.1rem;
+  margin-right: 1.35em;
+  float: right;
+}
+header .nav-bar li {
+  display: inline-block;
+}
+header .nav-bar li a {
+  display: block;
+  padding: 0 1.8rem;
+  color: #f0f0f0;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+}
+header .nav-bar li:hover {
+  background-color: #45567d;
+}
+
+#welcome-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  text-align: center;
+}
+#welcome-section .heading {
+  text-align: center;
+  font-size: 5.8rem;
+  color: #f0f0f0;
+  font-weight: 600;
+}
+#welcome-section .title {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #be3144;
+}
+
+#projects {
+  max-width: 100vw;
+  padding: 10rem 0;
+  background-color: #45567d;
+  text-align: center;
+}
+#projects .projects-title {
+  display: inline-block;
+  padding: 5px 1.2rem;
+  margin-bottom: 4rem;
+  color: #f0f0f0;
+  font-size: 4.2rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  border-bottom: 2px solid #f0f0f0;
+}
+#projects .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  grid-gap: 4rem;
+  padding: 2rem;
+}
+#projects .content__item {
+  background-color: #303841;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+#projects .content__item img {
+  display: block;
+  width: 100%;
+  height: calc(100% - 6.8rem);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#projects .content__item__title {
+  padding: 2rem 0;
+  font-size: 2rem;
+  color: #f0f0f0;
+  text-transform: capitalize;
+}
+#projects .content__item__title::after {
+  content: " />";
+}
+#projects .content__item__title::before {
+  content: "< ";
+}
+#projects .content__item__title::before, #projects .content__item__title::after {
+  color: #ff7f50;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+}
+#projects .content__item:hover .content__item__title::before, #projects .content__item:hover .content__item__title::after {
+  opacity: 1;
+}
+#projects .btn {
+  display: inline-block;
+  padding: 9px 2rem;
+  margin-top: 4rem;
+  border-radius: 2px;
+  color: #f0f0f0;
+  background-color: #303841;
+  font-size: 2rem;
+  -webkit-transition: background-color 0.25s linear;
+  transition: background-color 0.25s linear;
+  will-change: background-color;
+}
+#projects .btn:hover {
+  background-color: #be3144;
+}
+#projects .btn:hover i {
+  -webkit-transform: translate(2px);
+          transform: translate(2px);
+}
+#projects .btn i {
+  margin-left: 5px;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+  will-change: transform;
+}
+
+#contact {
+  padding: 13.5rem 0 12rem;
+  text-align: center;
+  background-color: #303841;
+}
+#contact .contact__heading {
+  font-size: 6rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  color: #f0f0f0;
+}
+#contact .contact__desc {
+  padding-top: 5px;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 200;
+  color: #f0f0f0;
+}
+#contact .contact__nav {
+  margin-top: 3.6rem;
+}
+#contact .contact__nav li {
+  display: inline-block;
+}
+#contact .contact__nav li a {
+  display: inline-block;
+  padding: 1.2rem 1.8rem;
+  font-size: 2.4rem;
+  color: #f0f0f0;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  -webkit-transition: -webkit-transform 0.25s linear;
+  transition: -webkit-transform 0.25s linear;
+  transition: transform 0.25s linear;
+  transition: transform 0.25s linear, -webkit-transform 0.25s linear;
+  will-change: transform;
+}
+#contact .contact__nav li a:hover {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 4rem 0;
+  border-top: 5px solid #be3144;
+  background-color: #303841;
+}
+footer p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #f0f0f0;
+}
+footer p a {
+  color: #f0f0f0;
+}
+
+@media only screen and (max-width: 460px) {
+  header {
+    text-align: center;
+  }
+  header .nav-bar {
+    float: none;
+    margin: 0 auto;
+  }
+  #projects {
+    padding: 5rem 0;
+  }
+  #projects .content {
+    padding: 8px;
+  }
+  #projects .btn {
+    padding: 7px 1.8rem;
+    font-size: 1.8rem;
+  }
+  #contact {
+    padding: 10rem 0;
+  }
+  #contact .contact__heading {
+    font-size: 3.6rem;
+  }
+  #contact .contact__nav {
+    margin-top: 3.6rem;
+  }
+  #contact .contact__nav li {
+    display: inline-block;
+  }
+  #contact .contact__nav li a {
+    font-size: 2rem;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    border-top-width: 4px;
+  }
+  footer .note {
+    margin-bottom: 3rem;
+  }
+  footer p {
+    font-size: 1.6rem;
+  }
+}
